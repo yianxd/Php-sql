@@ -15,7 +15,7 @@ $a=mysqli_query($bd,$sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Consultar clientes</title>
 </head>
 <body>
     <table>
@@ -33,6 +33,22 @@ $a=mysqli_query($bd,$sql);
             </tr>
         </th>
     </table>
-    
+    <?php while($cliente = mysqli_fetch_assoc($a)){?>
+    <tr>
+        <td> <?php echo $cliente['documento'];?> </td>
+        <td> <?php echo $cliente['tipo_documento'];?> </td>
+        <td> <?php echo $cliente['email'];?> </td>
+        <td> <?php echo $cliente['telefono'];?> </td>
+        <td> <?php echo $cliente['primer_nombre'];?> </td>
+        <td> <?php echo $cliente['segundo_nombre'];?> </td>
+        <td> <?php echo $cliente['primer_apellido'];?> </td>
+        <td> <?php echo $cliente['segundo_apellido'];?> </td>
+        <td> <?php echo $cliente['estado'];?> </td>
+        <td>
+            <a href="">eliminar</a>
+            <a href="/admin/clientes/actualizar.php?id=<?php echo $cliente['documento'];?>">actualizar</a>
+            <?php }?>
+        </td>
+    </tr>    
 </body>
 </html>
