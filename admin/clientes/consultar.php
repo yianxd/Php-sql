@@ -18,6 +18,7 @@ $a=mysqli_query($bd,$sql);
     <title>Consultar clientes</title>
 </head>
 <body>
+    <h3>Gestion de clientes</h3>
     <table>
         <th>
             <tr>
@@ -32,7 +33,6 @@ $a=mysqli_query($bd,$sql);
                 <td>estado</td>
             </tr>
         </th>
-    </table>
     <?php while($cliente = mysqli_fetch_assoc($a)){?>
     <tr>
         <td> <?php echo $cliente['documento'];?> </td>
@@ -50,5 +50,6 @@ $a=mysqli_query($bd,$sql);
             <?php }?>
         </td>
     </tr>    
+</table>
 </body>
 </html>
