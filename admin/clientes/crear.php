@@ -74,20 +74,28 @@ $errores =  [];
             <legend>Datos</legend>
             <label for="documento">Documento: </label><br>
             <input type="text" id="documento" name="documento"><br>
+
             <label for="tipo_documento">tipo de documento: </label><br>
             <input type="text" tipo='tipo_documento' name="tipo_documento"><br>
+
             <label for="email">Correo electrónico:</label><br>
             <input type="mail" id="email" name="email" ><br>
+
             <label for="telefono">Telefono: </label> <br>
             <input type="text" id="telefono" name="telefono"> <br>
+
             <label for="primero_nombre">Primer Nombre: </label> <br>
             <input type="text" id="primer_nombre" name="primer_nombre"> <br>
+
             <label for="segundo_nombre">Segundo Nombre:</label> <br>
             <input type="text" id="segundo_nombre" name="segundo_nombre"> <br>
+            
             <label for="primer_apellido">Primer Apellido:</label><br>
             <input type="text" id="primer_apellido" name="primer_apellido"><br>
+
             <label for="segundo_apellido">Segundo Apellido:</label><br>
             <input type="text" id="segundo_apellido" name="segundo_apellido" ><br>
+            
             <input type="submit" id="enviar" name="enviar" value="Enviar datos">
         </fieldset>
         
