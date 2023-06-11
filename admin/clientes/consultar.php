@@ -51,5 +51,7 @@ $a=mysqli_query($bd,$sql);
         </td>
     </tr>    
 </table>
+<a href="../../index.php">Regresar</a>
+
 </body>
 </html>

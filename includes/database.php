@@ -9,7 +9,7 @@ function conectar_db(){
         echo 'No se pudo conectar a la base de datos';
         exit;
     }else{
-        echo 'Conexión exitosa';
+        echo 'Bienvenido';
     }
     return $db;
 }
