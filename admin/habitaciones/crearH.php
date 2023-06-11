@@ -4,7 +4,7 @@ require '../../includes/database.php';
 $bd=conectar_db();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        
+
     }
 
 ?>
@@ -27,6 +27,7 @@ $bd=conectar_db();
             </fieldset>
         </form>
     </div>
+    <a href="../../gestionH.php">Regresar</a>
     
 </body>
 </html>

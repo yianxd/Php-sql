@@ -13,7 +13,8 @@
    
     <h3>Hotel de la Colina - Gestion Habitaciones</h3>
 
-    <a href="admin/habitaciones/crear.php">Insertar Habitaciones</a> <br>
+    <a href="admin/habitaciones/crearH.php">Insertar Habitaciones</a> <br>
+    <a href="admin/habitaciones/consultarH.php">Consultar habitaciones</a>
 
 </body>
 
