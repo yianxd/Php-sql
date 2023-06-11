@@ -19,13 +19,26 @@ $a=mysqli_query($bd,$sql);
     <table>
         <th>
             <tr>
-             <!-- inicio de creacion de tabla con la etiqueta "td" --> 
+            <td>id_habitacion</td>
+            <td>estado</td>
+            <td>precio_total</td>
+            <td>cantidad_personas</td>
+            <td>nombre_tipo</td>
             </tr>
         </th>
-    <?php  
-    //bloque de codigo php para ejecucion del while
-    
-    ?>
+    <?php while($habitaciom=mysqli_fetch_assoc($a)){?>
+     <tr>
+        <td> <?php echo $habitaciom['id_habitacion'];?></td>
+        <td> <?php echo $habitaciom['estado'];?></td>
+        <td> <?php echo $habitaciom['precio_total'];?></td>
+        <td> <?php echo $habitaciom['cantidad_personas'];?></td>
+        <td> <?php echo $habitaciom['nombre_tipo'];?></td>
+        <td>
+            <a href="">eliminar</a>
+            <a href="/admin/habitaciones/actualizarH.php"<?php echo $habitaciom['id_habitacion'];?> >actualizar</a>
+        </td>
+        <?php }?>
+     </tr>
     </table>
 <a href="../../gestionH.php">Regresar</a>
 </body>

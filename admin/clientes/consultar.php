@@ -4,9 +4,6 @@ require '../../includes/database.php';
 $bd=conectar_db();
 $sql="SELECT * FROM CLIENTE";
 $a=mysqli_query($bd,$sql);
-
-
-
 ?>
 
 <!DOCTYPE html>
