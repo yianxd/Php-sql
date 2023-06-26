@@ -9,8 +9,6 @@ $errores =  [];
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $id_habitacion = $_POST['id_habitacion'];
     $estado = $_POST['estado'];
-    $fecha_salida = $_POST['fecha_salida'];
-    $fecha_entrada = $_POST['fecha_entrada'];
     $precio_total = $_POST['precio_total'];
     $cantidad_personas = $_POST['cantidad_personas'];
     $nombre_tipo = $_POST['nombre_tipo'];
@@ -19,12 +17,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         };
         if(!$estado){
             $errores[]='Es obligatorio colocar el estado';
-        };
-        if(!$fecha_salida){
-            $errores[]='Es obligatorio colocar la fecha de salida';
-        };
-        if(!$fecha_entrada){
-            $errores[]='Es obligatorio colocar la fecha de entrada';
         };
         if(!$precio_total){
             $errores[]='Es obligatorio colocar el precio total';
@@ -37,8 +29,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         };
         if(empty($errores)){
         
-            $sql = "INSERT INTO habitacion(id_habitacion,estado,fecha_salida,fecha_entrada,precio_total,cantidad_personas,nombre_tipo) 
-            VALUES ('$id_habitacion','$estado','$fecha_salida','$fecha_entrada','$precio_total','$cantidad_personas','$nombre_tipo')" ;
+            $sql = "INSERT INTO habitacion(id_habitacion,estado,precio_total,cantidad_personas,nombre_tipo) 
+            VALUES ('$id_habitacion','$estado','$precio_total','$cantidad_personas','$nombre_tipo')" ;
 
             echo $sql;
 
@@ -76,12 +68,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             <label for="estado">Estado:</label><br>
             <input type="text" tipo='estado' name="estado"><br>
-
-            <label for="fecha_entrada">Fecha de entrada:</label><br>
-            <input type="text" tipo='fecha_entrada' name="fecha_entrada"><br>
-
-            <label for="fecha_salida">Fecha de salida:</label><br>
-            <input type="text" tipo='fecha_salida' name="fecha_salida"><br>
 
             <label for="precio_total">Precio total:</label><br>
             <input type="text" id="precio_total" name="precio_total" ><br>

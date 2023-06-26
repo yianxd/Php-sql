@@ -12,6 +12,7 @@ $a=mysqli_query($bd,$sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <title>Consultar clientes</title>
 </head>
 <body>
@@ -42,8 +43,8 @@ $a=mysqli_query($bd,$sql);
         <td> <?php echo $cliente['segundo_apellido'];?> </td>
         <td> <?php echo $cliente['estado'];?> </td>
         <td>
-            <a href="">eliminar</a>
-            <a href="/admin/clientes/actualizar.php?id=<?php echo $cliente['documento'];?>">actualizar</a>
+            <a href="./eliminar.php?documento=<?php echo $cliente['documento'];?>">eliminar</a>
+            <a href="./actualizar.php?documento=<?php echo $cliente['documento'];?>">actualizar</a>
             <?php }?>
         </td>
     </tr>    
